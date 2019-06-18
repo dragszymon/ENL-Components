@@ -1,0 +1,52 @@
+enl-side-drawer, enl-side-drawer > *{
+    position: relative;
+    z-index: 0;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+enl-side-drawer{
+    z-index: 10;
+}
+
+enl-side-drawer .enl-side-drawer__drawer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    max-width: 400px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: 80px auto;
+    z-index: 10;
+    transition: transform .25s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 0 20px -8px #000;
+    transform: translateX(-500px)
+} 
+
+enl-side-drawer[opened] .enl-side-drawer__drawer{
+    transform: translateX(0px)
+}
+
+enl-side-drawer .enl-side-drawer__backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 9;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    pointer-events: none;
+}
+
+enl-side-drawer[opened] .enl-side-drawer__backdrop{
+    opacity: 1;
+    pointer-events: all;
+}
+

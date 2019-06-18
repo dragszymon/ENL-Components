@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/enlighten-components.esm.js"></script>
+  <script nomodule src="/build/enlighten-components.esm.js"></script>
+
+</head>
+
+<body>
+
+  <style>
+      enl-side-drawer[opened] > .enl-side-drawer__drawer {
+        border: 1px solid red;
+      }
+
+      enl-side-drawer[opened] > .enl-side-drawer__drawer .content {
+        border: 1px solid green;
+      }
+      
+      enl-side-drawer[opened] > .enl-side-drawer__drawer .content .szymon {
+        background-color: red;
+      }
+  </style>
+
+  <enl-side-drawer opened>
+    <div slot="header">
+      header
+    </div>
+
+    <div slot="content">
+      <span class="szymon">asdasd</span>
+    </div>
+  </enl-side-drawer>
+
+  <button>Open</button>
+
+  <script>
+    let button = document.querySelector('button')
+    let drawer = document.querySelector('enl-side-drawer')
+
+    button.addEventListener('click', () => {
+      drawer.open()
+    })
+
+    drawer.addEventListener('onClose', () => {
+      console.log('close')
+    })
+    
+  </script>
+
+  
+
+</body>
+
+</html>
