@@ -14,19 +14,8 @@ export namespace Components {
     'open': () => Promise<void>;
     'opened': boolean;
   }
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface EnlSlider {
+    'sliderCount': number;
   }
 }
 
@@ -37,24 +26,13 @@ declare namespace LocalJSX {
     'onOnToggle'?: (event: CustomEvent<boolean>) => void;
     'opened'?: boolean;
   }
-  interface MyComponent extends JSXBase.HTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface EnlSlider extends JSXBase.HTMLAttributes {
+    'sliderCount'?: number;
   }
 
   interface IntrinsicElements {
     'enl-side-drawer': EnlSideDrawer;
-    'my-component': MyComponent;
+    'enl-slider': EnlSlider;
   }
 }
 
@@ -78,15 +56,15 @@ declare global {
     new (): HTMLEnlSideDrawerElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLEnlSliderElement extends Components.EnlSlider, HTMLStencilElement {}
+  var HTMLEnlSliderElement: {
+    prototype: HTMLEnlSliderElement;
+    new (): HTMLEnlSliderElement;
   };
 
   interface HTMLElementTagNameMap {
     'enl-side-drawer': HTMLEnlSideDrawerElement;
-    'my-component': HTMLMyComponentElement;
+    'enl-slider': HTMLEnlSliderElement;
   }
 
   interface ElementTagNameMap extends HTMLElementTagNameMap {}

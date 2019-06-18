@@ -11,10 +11,10 @@ export class EnlSideDrawer {
     @Event({ bubbles: false }) onClose: EventEmitter;
     @Event({ bubbles: false }) onToggle: EventEmitter<boolean>;
 
-    @Method() open() {
+    @Method() async open() {
         this._open()
     }
-    @Method() close() {
+    @Method() async close() {
         this._close()
     }
 
@@ -29,7 +29,7 @@ export class EnlSideDrawer {
         this.onClose.emit()
         this.onToggle.emit(false)
     }
-    
+
     render(){
         return [
             <div class="enl-side-drawer__drawer">
@@ -41,7 +41,7 @@ export class EnlSideDrawer {
                 </div>
             </div>,
 
-            <div 
+            <div
                 onClick={this._close.bind(this)}
                 class="enl-side-drawer__backdrop">
             </div>

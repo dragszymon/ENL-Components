@@ -11,48 +11,42 @@
 </head>
 
 <body>
-
   <style>
-      enl-side-drawer[opened] > .enl-side-drawer__drawer {
-        border: 1px solid red;
-      }
+    *{
+      padding: 0;
+      margin: 0;
+      position: relative;
+      box-sizing: border-box;
 
-      enl-side-drawer[opened] > .enl-side-drawer__drawer .content {
-        border: 1px solid green;
-      }
-      
-      enl-side-drawer[opened] > .enl-side-drawer__drawer .content .szymon {
-        background-color: red;
-      }
+      list-style: none;
+    }
   </style>
 
-  <enl-side-drawer opened>
-    <div slot="header">
-      header
-    </div>
+  <enl-slider slider-count="2">
+    <ul slot="slides">
+      <li>asdas</li>
+      <li>asdas</li>
+      <li>asdas</li>
+    </ul>
+  </enl-slider>
 
-    <div slot="content">
-      <span class="szymon">asdasd</span>
-    </div>
-  </enl-side-drawer>
+  <button id="next">Next</button>
+  <button id="prev">Prev</button>
 
-  <button>Open</button>
 
   <script>
-    let button = document.querySelector('button')
-    let drawer = document.querySelector('enl-side-drawer')
+    let slider = document.querySelector('enl-slider')
+    let b1 = document.querySelector("#next")
+    let b2 = document.querySelector("#prev")
 
-    button.addEventListener('click', () => {
-      drawer.open()
+    b1.addEventListener('click', () => {
+      //slider.nextSlide()
     })
 
-    drawer.addEventListener('onClose', () => {
-      console.log('close')
-    })
-    
+
   </script>
 
-  
+
 
 </body>
 
