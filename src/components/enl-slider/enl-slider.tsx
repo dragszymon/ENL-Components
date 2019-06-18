@@ -1,5 +1,9 @@
 import { Component, Element, Prop, h, State, Watch } from '@stencil/core';
 
+
+//KOMENTARZ
+
+
 @Component({
     tag: 'enl-slider',
     styleUrl: 'style.css',
