@@ -55,7 +55,7 @@ export class EnlSlider{
             let slideWidth = 100 / this.sliderCount + '%'
 
             for (let i=0; i<this.slides.length; i++){
-                let element = this.slides[i]
+                let element : HTMLElement = (this.slides[i] as HTMLElement)
                 element.style.minWidth=slideWidth;
                 element.style.maxWidth=slideWidth;
             }

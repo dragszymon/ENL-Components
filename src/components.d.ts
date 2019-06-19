@@ -17,6 +17,7 @@ export namespace Components {
   interface EnlSlider {
     'sliderCount': number;
   }
+  interface EnlTextField {}
 }
 
 declare namespace LocalJSX {
@@ -29,10 +30,12 @@ declare namespace LocalJSX {
   interface EnlSlider extends JSXBase.HTMLAttributes {
     'sliderCount'?: number;
   }
+  interface EnlTextField extends JSXBase.HTMLAttributes {}
 
   interface IntrinsicElements {
     'enl-side-drawer': EnlSideDrawer;
     'enl-slider': EnlSlider;
+    'enl-text-field': EnlTextField;
   }
 }
 
@@ -62,9 +65,16 @@ declare global {
     new (): HTMLEnlSliderElement;
   };
 
+  interface HTMLEnlTextFieldElement extends Components.EnlTextField, HTMLStencilElement {}
+  var HTMLEnlTextFieldElement: {
+    prototype: HTMLEnlTextFieldElement;
+    new (): HTMLEnlTextFieldElement;
+  };
+
   interface HTMLElementTagNameMap {
     'enl-side-drawer': HTMLEnlSideDrawerElement;
     'enl-slider': HTMLEnlSliderElement;
+    'enl-text-field': HTMLEnlTextFieldElement;
   }
 
   interface ElementTagNameMap extends HTMLElementTagNameMap {}
