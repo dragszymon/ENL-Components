@@ -15,6 +15,9 @@ export namespace Components {
     'opened': boolean;
   }
   interface EnlSlider {
+    'exccess': boolean;
+    'nextSlide': () => Promise<void>;
+    'prevSlide': () => Promise<void>;
     'slidesToShow': number;
   }
 }
@@ -27,6 +30,7 @@ declare namespace LocalJSX {
     'opened'?: boolean;
   }
   interface EnlSlider extends JSXBase.HTMLAttributes {
+    'exccess'?: boolean;
     'slidesToShow'?: number;
   }
 

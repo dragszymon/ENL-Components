@@ -22,26 +22,25 @@
     }
   </style>
 
-  <enl-slider slides-to-show="2">
-    <ul slot="slides">
-      <li>asdas</li>
-      <li>asdas</li>
-      <li>asdas</li>
-    </ul>
-  </enl-slider>
+  <enl-slider exccess slides-to-show="3">
 
-  <button id="next">Next</button>
-  <button id="prev">Prev</button>
+    <ul slot="slides">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+
+    <div slot="next-slide">Next</div>
+    <div slot="prev-slide">Prev</div>
+
+  </enl-slider>
 
 
   <script>
-    let slider = document.querySelector('enl-slider')
-    let b1 = document.querySelector("#next")
-    let b2 = document.querySelector("#prev")
 
-    b1.addEventListener('click', () => {
-      //slider.nextSlide()
-    })
 
 
   </script>

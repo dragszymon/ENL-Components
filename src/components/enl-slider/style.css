@@ -11,11 +11,10 @@ enl-slider{
      /* Basic Styles */
     display: block;
     overflow: hidden;
+    user-select: none;
 
     /* Theme Styles */
     height: 500px;
-    border: 1px solid red;
-
 }
 
 enl-slider > .enl-slider {
@@ -30,7 +29,8 @@ enl-slider > .enl-slider > ul {
     flex-wrap: no-wrap;
     height: 100%;
     width: 100%;
-    border: 1px solid pink;
+    transition: transform 0.5s ease-in-out;
+    
 }
 
 enl-slider > .enl-slider > ul > li {
@@ -45,6 +45,37 @@ enl-slider > .enl-slider > ul > li {
     /* Dynamic Value */
     min-width: 100%;
     max-width: 100%;
+}
+
+enl-slider > .enl-slider-arrow{
+    /* Basic Styles */
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+
+    /* Theme Styles */
+    width: 50px;
+    height: 50px;
+    margin-top: -25px; /* 50% of element height */
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out, display 0s;
+    transition-delay: 0s, 0.2s
+}
+
+enl-slider > .enl-slider-arrow.hidden{
+    opacity: 0;
+    display: none
+}
+
+enl-slider > .enl-slider-arrow.enl-slider-arrow-prev {
+    left: 0px;
+}
+
+enl-slider > .enl-slider-arrow.enl-slider-arrow-next {
+    right: 0px;
 }
 
 /* If component was not set up correctly */
