@@ -17,7 +17,11 @@ export namespace Components {
   interface EnlSlider {
     'slidesToShow': number;
   }
-  interface EnlTextField {}
+  interface EnlTextField {
+    'initValue': string;
+    'label': string;
+    'placeholder': string;
+  }
 }
 
 declare namespace LocalJSX {
@@ -30,7 +34,11 @@ declare namespace LocalJSX {
   interface EnlSlider extends JSXBase.HTMLAttributes {
     'slidesToShow'?: number;
   }
-  interface EnlTextField extends JSXBase.HTMLAttributes {}
+  interface EnlTextField extends JSXBase.HTMLAttributes {
+    'initValue'?: string;
+    'label'?: string;
+    'placeholder'?: string;
+  }
 
   interface IntrinsicElements {
     'enl-side-drawer': EnlSideDrawer;
