@@ -1,0 +1,35 @@
+enl-text-field div{
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+
+
+    position: relative;
+}
+
+enl-text-field label{
+    font-size: 16px;
+
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 5px;
+    z-index: 100;
+}
+
+enl-text-field label.active{
+    top: 0;
+    font-size: 10px;
+}
+
+enl-text-field #enl-input{
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: #f0e9e9;
+    border-radius: 5px;
+    border: none;
+}
+
+enl-text-field #enl-input:focus{
+    background-color: #d8d7d7;
+}
