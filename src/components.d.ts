@@ -15,7 +15,7 @@ export namespace Components {
     'opened': boolean;
   }
   interface EnlSlider {
-    'sliderCount': number;
+    'slidesToShow': number;
   }
   interface EnlTextField {}
 }
@@ -28,7 +28,7 @@ declare namespace LocalJSX {
     'opened'?: boolean;
   }
   interface EnlSlider extends JSXBase.HTMLAttributes {
-    'sliderCount'?: number;
+    'slidesToShow'?: number;
   }
   interface EnlTextField extends JSXBase.HTMLAttributes {}
 

@@ -39,13 +39,15 @@ enl-slider > .enl-slider > ul > li {
     flex: 1;
     overflow: hidden;
     height: 100%;
-    min-width: 100%;
     border: 1px solid green;
     top: 0;
+
+    /* Dynamic Value */
+    min-width: 100%;
+    max-width: 100%;
 }
 
-
-
+/* If component was not set up correctly */
 enl-slider.failed{
     display: none;
 }
