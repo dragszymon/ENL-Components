@@ -19,8 +19,8 @@ export namespace Components {
   }
   interface EnlTextField {
     'initValue': string;
-    'label': string;
     'placeholder': string;
+    'value': string;
   }
 }
 
@@ -36,8 +36,8 @@ declare namespace LocalJSX {
   }
   interface EnlTextField extends JSXBase.HTMLAttributes {
     'initValue'?: string;
-    'label'?: string;
     'placeholder'?: string;
+    'value'?: string;
   }
 
   interface IntrinsicElements {

@@ -1,6 +1,7 @@
 import { Component, Element, h, State, Prop } from '@stencil/core';
 
 
+
 @Component({
     tag: 'enl-text-field',
     styleUrl: 'style.css',
@@ -22,9 +23,6 @@ export class EnlTextField{
     // default value which can be set by HTML attribute
     @Prop() initValue : string
 
-    // label which can be set by HTML attribute
-    @Prop() label : string
-
     // value from input
     @State() inputValue : string
 
@@ -33,7 +31,7 @@ export class EnlTextField{
 
     // a text being showed in input box (it's initial value set by HTML attribute
     // or just written in input box by user)
-    @State() value : string
+    @Prop({reflectToAttr: true, mutable: true}) value : string
 
 
     // adds active class to host element
@@ -65,7 +63,6 @@ export class EnlTextField{
 
     _updateValue(){
         this.value = this.inputValue;
-        console.log(this.value)
     }
 
 
